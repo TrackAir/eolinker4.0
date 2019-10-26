@@ -40,6 +40,7 @@ class MockController
         );
         $request_type = $type[$_SERVER['REQUEST_METHOD']];
         $api_uri = $_GET['uri'];
+        $api_uri = explode('?',$api_uri);
 
         $service = new MockModule();
         switch ($result_type) {
